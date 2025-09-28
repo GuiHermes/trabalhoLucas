@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Site Exemplo</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; }
+        header { background: #333; color: #fff; padding: 1em 0; }
+        nav { display: flex; justify-content: center; gap: 2em; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; }
+        nav a.active { text-decoration: underline; }
+        .container { max-width: 800px; margin: 2em auto; padding: 1em; }
+        .hidden { display: none; }
+        form { display: flex; flex-direction: column; gap: 1em; max-width: 400px; }
+        label { font-weight: bold; }
+        input, button { padding: 0.5em; }
+        .gallery { display: flex; gap: 1em; flex-wrap: wrap; }
+        .gallery img { width: 200px; height: 150px; object-fit: cover; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="" id="homeLink" class="active">Home</a>
+            <a href="assets/pages/extra.html" id="cadastroLink">Cadastro</a>
+            <a href="assets/pages/extra.html" id="imagensLink">Imagens</a>
+            <a href=""></a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="homeSection">
+            <h1>Bem-vindo ao Site Exemplo</h1>
+            <p>Esta é a página inicial do seu site fictício com navegação entre páginas.</p>
+        </section>
+        <section id="cadastroSection" class="hidden">
+            <h1>Cadastro</h1>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </section>
+        <section id="imagensSection" class="hidden">
+            <h1>Galeria de Imagens</h1>
+            <div class="gallery">
+                <img src="https://picsum.photos/200/150?random=1" alt="Imagem 1">
+                <img src="https://picsum.photos/200/150?random=2" alt="Imagem 2">
+                <img src="https://picsum.photos/200/150?random=3" alt="Imagem 3">
+            </div>
+        </section>
+    </div>
+    <script>
+        const homeLink = document.getElementById('homeLink');
+        const cadastroLink = document.getElementById('cadastroLink');
+        const imagensLink = document.getElementById('imagensLink');
+        const homeSection = document.getElementById('homeSection');
+        const cadastroSection = document.getElementById('cadastroSection');
+        const imagensSection = document.getElementById('imagensSection');
+        const links = [homeLink, cadastroLink, imagensLink];
+        const sections = [homeSection, cadastroSection, imagensSection];
+
+        function showSection(index) {
+            sections.forEach((sec, i) => sec.classList.toggle('hidden', i !== index));
+            links.forEach((link, i) => link.classList.toggle('active', i === index));
+        }
+
+        homeLink.onclick = (e) => { e.preventDefault(); showSection(0); };
+        cadastroLink.onclick = (e) => { e.preventDefault(); showSection(1); };
+        imagensLink.onclick = (e) => { e.preventDefault(); showSection(2); };
+    </script>
+</body>
+</html>
