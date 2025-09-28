@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" href="../assets/img/logoIcon.png">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html"><img src="../assets/img/logoIcon.png" alt="Logo do site" width="55px"></a>
+            <a href="../index.html">Sobre mim</a>
+            <a href="contato.html">Contato</a>
+            <a href="extra.html">Extra</a>
+        </nav>
+    </header>
+    <main>
+        <div id="formulario">
+            <h1>Entre em contato comigo</h1>
+            <p>Digite seus dados e entre em contato</p>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <input type="email" name="email" id="email" placeholder="exemplo@email.com">
+            <input type="tel" name="telefone" id="telefone" placeholder="(12)34567890">
+            <input type="button" id="btnEnviar" value="Entrar em contato">
+        </div>
+    </main>
+    <footer>
+    <div class="footer-container">
+        <p>&copy; 2025 Guilherme Hermes de Ataíde. Todos os direitos reservados.</p>
+        <p>Contato: <a href="mailto:guiataide124@gmail.com">guiataide124@gmail.com</a></p>
+        <div class="social">
+            <a href="https://github.com/GuiHermes" target="_blank"><img src="../assets/img/github.png" alt="Logo Github" width="30px"></a>
+            <a href="https://www.instagram.com/g.hermes14" target="_blank"><img src="../assets/img/instagram.png" alt="Logo Instagram" width="30px"></a>
+            <a href="https://steamcommunity.com/id/ghermes14/" target="_blank"><img src="../assets/img/logosteam.png" alt="Logo Steam" width="30px"></a>
+        </div>
+    </div>
+   </footer>
+    <script>
+        const btn = document.getElementById('btnEnviar');
+        btn.addEventListener('click', () => {
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            if (!email && !telefone) {
+                alert('Por favor, preencha pelo menos o email ou o telefone.');
+                return;
+            }
+            if (!email.includes('@')) {
+            alert('Por favor, digite um email válido.');
+            return;
+            }
+            if (!nome) {
+                alert('Por favor, digite seu nome.');
+                return;
+            }
+            alert(`Obrigado, ${nome}! Entrarei em contato em breve.`);
+            window.location.href = "../index.html";
+        });
+    </script>
+</body>
+
+</html>
