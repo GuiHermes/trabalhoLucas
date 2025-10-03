@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="cabecalho">
         <nav>
             <a href="../index.html"><img src="../assets/img/logoIcon.png" alt="Logo do site" width="55px"></a>
             <a href="../index.html">Sobre mim</a>
@@ -28,17 +28,20 @@
             <input type="button" id="btnEnviar" value="Entrar em contato">
         </div>
     </main>
-    <footer>
-    <div class="footer-container">
-        <p>&copy; 2025 Guilherme Hermes de Ataíde. Todos os direitos reservados.</p>
-        <p>Contato: <a href="mailto:guiataide124@gmail.com">guiataide124@gmail.com</a></p>
-        <div class="social">
-            <a href="https://github.com/GuiHermes" target="_blank"><img src="../assets/img/github.png" alt="Logo Github" width="30px"></a>
-            <a href="https://www.instagram.com/g.hermes14" target="_blank"><img src="../assets/img/instagram.png" alt="Logo Instagram" width="30px"></a>
-            <a href="https://steamcommunity.com/id/ghermes14/" target="_blank"><img src="../assets/img/logosteam.png" alt="Logo Steam" width="30px"></a>
+    <footer class="rodape">
+        <div>
+            <p>&copy; 2025 Guilherme Hermes de Ataíde. Todos os direitos reservados.</p>
+            <p>Contato: <a href="mailto:guiataide124@gmail.com">guiataide124@gmail.com</a></p>
+            <div class="social">
+                <a href="https://github.com/GuiHermes" target="_blank"><img src="../assets/img/github.png"
+                        alt="Logo Github" width="30px"></a>
+                <a href="https://www.instagram.com/g.hermes14" target="_blank"><img src="../assets/img/instagram.png"
+                        alt="Logo Instagram" width="30px"></a>
+                <a href="https://steamcommunity.com/id/ghermes14/" target="_blank"><img
+                        src="../assets/img/logosteam.png" alt="Logo Steam" width="30px"></a>
+            </div>
         </div>
-    </div>
-   </footer>
+    </footer>
     <script>
         const btn = document.getElementById('btnEnviar');
         btn.addEventListener('click', () => {
@@ -50,8 +53,8 @@
                 return;
             }
             if (!email.includes('@')) {
-            alert('Por favor, digite um email válido.');
-            return;
+                alert('Por favor, digite um email válido.');
+                return;
             }
             if (!nome) {
                 alert('Por favor, digite seu nome.');
