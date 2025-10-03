@@ -194,16 +194,78 @@ footer, .rodape {
 }
 
 /* PAGINA CONTATO */
+.bodyContato {
+    min-height: 100vh;        
+    display: flex;               
+    flex-direction: column;     
+}
 
+.mainContato {
+    flex: 1;               
+}
+
+.rodapeContato {
+    margin-top: auto;           
+}
+.formulario{
+    background-color: var(--bg2);
+    border-radius: 4px;
+    box-shadow: 4px 4px var(--txt);
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 700px;
+}
+input[type='text'],input[type='email'],input[type='tel']{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    height: 35px;
+    width: 70%;
+    max-width: 300px;
+    border-radius: 4px;
+    box-shadow: 4px 4px var(--txt2);
+    background-color: var(--txt3);
+    padding-left: 5px ;
+    color: var(--txt);
+    
+}
+input[type='text']::placeholder,
+input[type='email']::placeholder,
+input[type='tel']::placeholder{
+    color: var(--txt);
+    padding-left: 5px;
+}
+
+#btnEnviar{
+    display: inline-block;
+    padding: 12px 25px;
+    box-shadow: 4px 4px var(--txt2);
+    border-radius: 4px;
+    background: var(--cor1);
+    border: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--txt2);
+    transition: background-color 0.3s ease, transform 0.4s ease;
+    font-family: 'fonteExtra','Segoe UI';
+}
+#btnEnviar:hover{
+    transform: scale(1.05);
+    background-color: var(--cor2);
+
+}
 /* PAGINA EXTRA */
 .bodyExtra{
     font-family:'fonteExtra','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.jogos {
+.jogos{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
 }
 
 .jogos aside {
@@ -218,7 +280,6 @@ footer, .rodape {
     margin-bottom: 10px;
     color: var(--bg3);
 }
-
 .jogos img {
     width: 100%;
     border-radius: 10px;
@@ -237,7 +298,8 @@ footer, .rodape {
 }
 .mainJogos a{
     display: grid;
-    grid-column: 2 / 3;    background-color: var(--cor1);
+    grid-column: 2 / 3;
+    background-color: var(--cor1);
     color: var(--bg3);
     padding: 12px 25px;
     border-radius: 8px;
@@ -246,15 +308,12 @@ footer, .rodape {
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 4px 4px var(--txt)
+    box-shadow: 4px 4px var(--txt);
 }
 .mainJogos a:hover{
     background-color: var(--cor2);
     transform: scale(1.05);
 }
-
-
-
 
 @media (max-width: 768px) {
     .cabecalho nav {
@@ -267,7 +326,10 @@ footer, .rodape {
     }
 }
 @media (max-width: 480px) {
-    .jogos {
+    .jogos{
         grid-template-columns: 1fr;
+    }
+    .mainJogos a{
+        grid-column: 1/1;
     }
 }
