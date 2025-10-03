@@ -103,6 +103,13 @@ main p a:hover {
 
 }
 
+.foto-perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 #interesses{
     padding: 25px;
     align-items: center;
@@ -325,6 +332,20 @@ input[type='tel']::placeholder{
         padding: 0 15px;
     }
 }
+
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* empilha imagem e texto */
+        text-align: center;
+        gap: 15px;
+    }
+
+    .foto-perfil {
+        width: 120px;
+        height: 120px;
+    }
+}
+
 @media (max-width: 480px) {
     .jogos{
         grid-template-columns: 1fr;
