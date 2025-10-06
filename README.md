@@ -12,6 +12,12 @@ Um site desenvolvido com HTML, CSS e JavaScript.
 - JavaScript
 
 ---
+## Links
+- Video de apresentação -> https://drive.google.com/file/d/1sVPQNOey6RPb7xcEXcCWvqDqa4mYDMbG/view?usp=sharing
+- Pagina hospedada -> https://guihermes.github.io/trabalhoLucas/
+
+
+---
 
 ## 🚀 Como executar localmente
 
